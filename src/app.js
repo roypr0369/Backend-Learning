@@ -23,6 +23,11 @@ app.use(express.static("public")) // This line is used to send static files from
 
 app.use(cookieParser()) // This line is used to send data from the cookies to the server.
 
+// routes  import
+import userRouter from './routes/user.routes.js';
 
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
 
 export default app;
